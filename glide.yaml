@@ -1,0 +1,50 @@
+package: k8s.io/kube-gen
+import:
+- package: github.com/gogo/protobuf
+  version: ~0.4.0
+  subpackages:
+  - gogoproto
+  - proto
+  - sortkeys
+  - vanity/command
+- package: github.com/golang/glog
+- package: github.com/spf13/pflag
+  version: ~1.0.0
+- package: k8s.io/apimachinery
+  subpackages:
+  - pkg/apimachinery/announced
+  - pkg/apimachinery/registered
+  - pkg/apis/meta/v1
+  - pkg/labels
+  - pkg/openapi
+  - pkg/runtime
+  - pkg/runtime/schema
+  - pkg/runtime/serializer
+  - pkg/types
+  - pkg/util/sets
+  - pkg/watch
+  - third_party/forked/golang/reflect
+- package: k8s.io/client-go
+  version: ~4.0.0-beta.0
+  subpackages:
+  - discovery
+  - discovery/fake
+  - rest
+  - testing
+  - util/flowcontrol
+- package: k8s.io/gengo
+  subpackages:
+  - args
+  - examples/deepcopy-gen/generators
+  - examples/defaulter-gen/generators
+  - examples/import-boss/generators
+  - examples/set-gen/generators
+  - generator
+  - namer
+  - parser
+  - types
+testImport:
+- package: github.com/stretchr/testify
+  version: ~1.1.4
+  subpackages:
+  - assert
